@@ -1,0 +1,34 @@
+{
+  "name": "yadulla-mirzayev-portfolio",
+  "version": "1.0.0",
+  "description": "Unity Game Developer Portfolio - Yadulla Mirzayev",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server -p 8080",
+    "dev": "npx http-server -p 8080 -o",
+    "build": "echo 'Static site - no build process needed'",
+    "deploy": "echo 'Deploy via GitHub Actions'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yadikk/yadikk.github.io.git"
+  },
+  "keywords": [
+    "portfolio",
+    "game-developer",
+    "unity",
+    "gamedev",
+    "yadulla-mirzayev",
+    "baku",
+    "azerbaijan"
+  ],
+  "author": "Yadulla Mirzayev <yadullamirzeyev5@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://yadikk.dev",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
