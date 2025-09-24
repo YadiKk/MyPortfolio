@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Solid Plane - Project Details</title>
+    <title>Solid Plane - Physics-Based Flight Simulation | Yadulla Mirzayev</title>
     <link rel="stylesheet" href="../../assets/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -11,7 +11,9 @@
     <nav class="nav">
         <div class="nav-container">
             <div class="nav-logo">
-                <span class="logo-text">Yadulla</span>
+                <a href="../../index.html" style="text-decoration: none; color: inherit;">
+                    <span class="logo-text">Yadulla</span>
+                </a>
             </div>
             <div class="nav-links">
                 <a href="../../index.html#projects" class="nav-link">Projects</a>
@@ -20,44 +22,177 @@
             </div>
         </div>
     </nav>
-    <section class="hero">
+
+    <!-- Hero Section -->
+    <section class="hero" style="min-height: 80vh; padding-top: 100px;">
         <div class="hero-container">
-            <div class="hero-content">
+            <div class="hero-content" style="text-align: center;">
                 <h1 class="hero-title pixel-title">Solid Plane</h1>
-                <p class="hero-description">Physics-based flight simulation game featuring realistic aerodynamics and challenging missions.</p>
-                <a href="../../index.html" class="btn btn-primary" style="margin-top:2rem;">&#8592; Back to Home</a>
+                <p class="hero-description">Physics-Based Flight Simulation with Realistic Aerodynamics</p>
+                <div style="margin-top: 2rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <span style="background: var(--accent-primary); color: var(--bg-primary); padding: 0.5rem 1rem; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">Genre: Flight Simulation</span>
+                    <span style="background: var(--accent-success); color: var(--bg-primary); padding: 0.5rem 1rem; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">Platform: Mobile</span>
+                    <span style="background: var(--accent-secondary); color: var(--bg-primary); padding: 0.5rem 1rem; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">Physics-Based</span>
+                </div>
+                <a href="../../index.html" class="btn btn-primary" style="margin-top: 2rem;">← Back to Home</a>
             </div>
         </div>
     </section>
-    <section class="projects">
+
+    <!-- Project Overview -->
+    <section class="about" style="padding: 4rem 0;">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Project Details</h2>
-            </div>
-            <div class="project-card featured">
-                <div class="project-image">
-                    <div class="project-placeholder">
-                        <i class="fas fa-plane"></i>
+            <div class="about-content" style="grid-template-columns: 1fr; max-width: 1000px; margin: 0 auto;">
+                <div class="about-text">
+                    <div style="background: var(--bg-card); border: var(--border-thick) solid var(--accent-primary); padding: var(--spacing-2xl); margin-bottom: var(--spacing-2xl); text-align: center;">
+                        <h2 style="color: var(--accent-primary); font-size: var(--font-size-3xl); margin-bottom: var(--spacing-lg); text-transform: uppercase; letter-spacing: 2px;">Game Overview</h2>
+                        <p style="color: var(--text-secondary); line-height: 1.6; font-size: var(--font-size-lg);">
+                            The game assigns players the task of managing an aircraft flying in one direction, balancing fuel usage while avoiding obstacles and threats. Players can collect coins and crystals to upgrade their plane or purchase a new one.
+                        </p>
                     </div>
-                </div>
-                <div class="project-content">
-                    <h3 class="project-title">Solid Plane</h3>
-                    <p class="project-description">A physics-based flight simulation game featuring realistic aerodynamics and challenging missions. Players pilot various aircraft through dynamic weather conditions and complex scenarios.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Unity</span>
-                        <span class="tech-tag">C#</span>
-                        <span class="tech-tag">Physics</span>
+
+                    <!-- Game Screenshots -->
+                    <div style="background: var(--bg-card); border: var(--border-thin) solid var(--border-color); padding: var(--spacing-xl); margin-bottom: var(--spacing-xl);">
+                        <h3 style="color: var(--accent-secondary); font-size: var(--font-size-2xl); margin-bottom: var(--spacing-lg); text-transform: uppercase; letter-spacing: 2px; text-align: center;">Game Screenshots</h3>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--spacing-lg);">
+                            <div style="text-align: center;">
+                                <img src="../../assets/images/projects/Photos/Solid Plane/photo1702831386 (1).jpeg" alt="Solid Plane Gameplay 1" style="width: 100%; height: 150px; object-fit: cover; border: var(--border-thin) solid var(--border-color); margin-bottom: var(--spacing-sm);">
+                                <p style="color: var(--text-secondary); font-size: var(--font-size-sm);">Aircraft Control</p>
+                            </div>
+                            <div style="text-align: center;">
+                                <img src="../../assets/images/projects/Photos/Solid Plane/photo1702831386 (2).jpeg" alt="Solid Plane Gameplay 2" style="width: 100%; height: 150px; object-fit: cover; border: var(--border-thin) solid var(--border-color); margin-bottom: var(--spacing-sm);">
+                                <p style="color: var(--text-secondary); font-size: var(--font-size-sm);">Fuel Management</p>
+                            </div>
+                            <div style="text-align: center;">
+                                <img src="../../assets/images/projects/Photos/Solid Plane/photo1702831386 (3).jpeg" alt="Solid Plane Gameplay 3" style="width: 100%; height: 150px; object-fit: cover; border: var(--border-thin) solid var(--border-color); margin-bottom: var(--spacing-sm);">
+                                <p style="color: var(--text-secondary); font-size: var(--font-size-sm);">Obstacle Avoidance</p>
+                            </div>
+                            <div style="text-align: center;">
+                                <img src="../../assets/images/projects/Photos/Solid Plane/photo1702831386 (5).jpeg" alt="Solid Plane Gameplay 4" style="width: 100%; height: 150px; object-fit: cover; border: var(--border-thin) solid var(--border-color); margin-bottom: var(--spacing-sm);">
+                                <p style="color: var(--text-secondary); font-size: var(--font-size-sm);">Resource Collection</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Game Features -->
+                    <div style="background: var(--bg-card); border: var(--border-thin) solid var(--border-color); padding: var(--spacing-xl); margin-bottom: var(--spacing-xl);">
+                        <h3 style="color: var(--accent-secondary); font-size: var(--font-size-2xl); margin-bottom: var(--spacing-lg); text-transform: uppercase; letter-spacing: 2px;">Game Features</h3>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--spacing-lg);">
+                            <div>
+                                <h4 style="color: var(--accent-primary); margin-bottom: var(--spacing-sm); font-size: var(--font-size-lg);">✈️ Aircraft Management</h4>
+                                <ul style="color: var(--text-secondary); line-height: 1.6; font-size: var(--font-size-sm); margin-left: var(--spacing-md);">
+                                    <li>Realistic flight physics simulation</li>
+                                    <li>One-directional flight mechanics</li>
+                                    <li>Advanced aerodynamics system</li>
+                                    <li>Precise control responsiveness</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 style="color: var(--accent-primary); margin-bottom: var(--spacing-sm); font-size: var(--font-size-lg);">⛽ Fuel Management</h4>
+                                <ul style="color: var(--text-secondary); line-height: 1.6; font-size: var(--font-size-sm); margin-left: var(--spacing-md);">
+                                    <li>Strategic fuel consumption balancing</li>
+                                    <li>Real-time fuel level monitoring</li>
+                                    <li>Efficient flight path optimization</li>
+                                    <li>Emergency fuel management</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 style="color: var(--accent-primary); margin-bottom: var(--spacing-sm); font-size: var(--font-size-lg);">🚧 Obstacle Avoidance</h4>
+                                <ul style="color: var(--text-secondary); line-height: 1.6; font-size: var(--font-size-sm); margin-left: var(--spacing-md);">
+                                    <li>Dynamic obstacle generation</li>
+                                    <li>Threat detection and avoidance</li>
+                                    <li>Environmental hazard navigation</li>
+                                    <li>Strategic maneuvering system</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 style="color: var(--accent-primary); margin-bottom: var(--spacing-sm); font-size: var(--font-size-lg);">💰 Progression System</h4>
+                                <ul style="color: var(--text-secondary); line-height: 1.6; font-size: var(--font-size-sm); margin-left: var(--spacing-md);">
+                                    <li>Coin and crystal collection</li>
+                                    <li>Aircraft upgrade system</li>
+                                    <li>New plane purchases</li>
+                                    <li>Performance enhancement options</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Technical Implementation -->
+                    <div style="background: var(--bg-card); border: var(--border-thick) solid var(--accent-success); padding: var(--spacing-xl); margin-bottom: var(--spacing-xl);">
+                        <h3 style="color: var(--accent-success); font-size: var(--font-size-2xl); margin-bottom: var(--spacing-lg); text-transform: uppercase; letter-spacing: 2px; text-align: center;">Technical Implementation</h3>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--spacing-lg);">
+                            <div>
+                                <h4 style="color: var(--accent-primary); margin-bottom: var(--spacing-sm); font-size: var(--font-size-lg);">🔧 Physics Engine</h4>
+                                <p style="color: var(--text-secondary); line-height: 1.5; font-size: var(--font-size-sm);">
+                                    Custom physics implementation for realistic flight dynamics and aerodynamics simulation.
+                                </p>
+                            </div>
+                            <div>
+                                <h4 style="color: var(--accent-primary); margin-bottom: var(--spacing-sm); font-size: var(--font-size-lg);">📱 Mobile Optimization</h4>
+                                <p style="color: var(--text-secondary); line-height: 1.5; font-size: var(--font-size-sm);">
+                                    Optimized for mobile devices with touch controls and responsive performance.
+                                </p>
+                            </div>
+                            <div>
+                                <h4 style="color: var(--accent-primary); margin-bottom: var(--spacing-sm); font-size: var(--font-size-lg);">🎮 Game Mechanics</h4>
+                                <p style="color: var(--text-secondary); line-height: 1.5; font-size: var(--font-size-sm);">
+                                    Balanced gameplay mechanics focusing on skill-based progression and resource management.
+                                </p>
+                            </div>
+                            <div>
+                                <h4 style="color: var(--accent-primary); margin-bottom: var(--spacing-sm); font-size: var(--font-size-lg);">🎨 Visual Design</h4>
+                                <p style="color: var(--text-secondary); line-height: 1.5; font-size: var(--font-size-sm);">
+                                    Clean, modern UI design optimized for mobile gameplay experience.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gameplay Mechanics -->
+                    <div style="background: var(--bg-card); border: var(--border-thin) solid var(--border-color); padding: var(--spacing-xl);">
+                        <h3 style="color: var(--accent-secondary); font-size: var(--font-size-2xl); margin-bottom: var(--spacing-lg); text-transform: uppercase; letter-spacing: 2px;">Core Gameplay Loop</h3>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--spacing-md);">
+                            <div style="text-align: center; padding: var(--spacing-md); background: var(--bg-tertiary); border: var(--border-thin) solid var(--border-color);">
+                                <div style="background: var(--accent-primary); color: var(--bg-primary); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto var(--spacing-sm); font-weight: bold;">1</div>
+                                <h4 style="color: var(--accent-primary); margin-bottom: var(--spacing-sm); font-size: var(--font-size-md);">Take Flight</h4>
+                                <p style="color: var(--text-secondary); font-size: var(--font-size-sm);">Start your aircraft and begin the journey</p>
+                            </div>
+                            <div style="text-align: center; padding: var(--spacing-md); background: var(--bg-tertiary); border: var(--border-thin) solid var(--border-color);">
+                                <div style="background: var(--accent-secondary); color: var(--bg-primary); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto var(--spacing-sm); font-weight: bold;">2</div>
+                                <h4 style="color: var(--accent-primary); margin-bottom: var(--spacing-sm); font-size: var(--font-size-md);">Navigate</h4>
+                                <p style="color: var(--text-secondary); font-size: var(--font-size-sm);">Avoid obstacles and manage fuel efficiently</p>
+                            </div>
+                            <div style="text-align: center; padding: var(--spacing-md); background: var(--bg-tertiary); border: var(--border-thin) solid var(--border-color);">
+                                <div style="background: var(--accent-success); color: var(--bg-primary); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto var(--spacing-sm); font-weight: bold;">3</div>
+                                <h4 style="color: var(--accent-primary); margin-bottom: var(--spacing-sm); font-size: var(--font-size-md);">Collect</h4>
+                                <p style="color: var(--text-secondary); font-size: var(--font-size-sm);">Gather coins and crystals for upgrades</p>
+                            </div>
+                            <div style="text-align: center; padding: var(--spacing-md); background: var(--bg-tertiary); border: var(--border-thin) solid var(--border-color);">
+                                <div style="background: var(--accent-tertiary); color: var(--bg-primary); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto var(--spacing-sm); font-weight: bold;">4</div>
+                                <h4 style="color: var(--accent-primary); margin-bottom: var(--spacing-sm); font-size: var(--font-size-md);">Upgrade</h4>
+                                <p style="color: var(--text-secondary); font-size: var(--font-size-sm);">Improve your aircraft or buy new ones</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <p class="footer-text">&copy; 2024 Yadulla Mirzayev. Unity Game Developer from Baku, Azerbaijan.</p>
+                <div class="footer-links">
+                    <a href="../../index.html" class="footer-link">Home</a>
+                    <a href="../../index.html#projects" class="footer-link">Projects</a>
+                    <a href="../../index.html#contact" class="footer-link">Contact</a>
+                </div>
             </div>
         </div>
     </footer>
+
+    <script src="../../assets/js/script.js"></script>
 </body>
 </html>

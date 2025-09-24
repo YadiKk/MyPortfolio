@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EcoState - Project Details</title>
+    <title>EcoState - Environmental Simulation Game | Yadulla Mirzayev</title>
     <link rel="stylesheet" href="../../assets/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -11,7 +11,9 @@
     <nav class="nav">
         <div class="nav-container">
             <div class="nav-logo">
-                <span class="logo-text">Yadulla</span>
+                <a href="../../index.html" style="text-decoration: none; color: inherit;">
+                    <span class="logo-text">Yadulla</span>
+                </a>
             </div>
             <div class="nav-links">
                 <a href="../../index.html#projects" class="nav-link">Projects</a>
@@ -20,44 +22,163 @@
             </div>
         </div>
     </nav>
-    <section class="hero">
+
+    <!-- Hero Section -->
+    <section class="hero" style="min-height: 80vh; padding-top: 100px;">
         <div class="hero-container">
-            <div class="hero-content">
+            <div class="hero-content" style="text-align: center;">
                 <h1 class="hero-title pixel-title">EcoState</h1>
-                <p class="hero-description">Environmental simulation game focused on sustainability and resource management.</p>
-                <a href="../../index.html" class="btn btn-primary" style="margin-top:2rem;">&#8592; Back to Home</a>
+                <p class="hero-description">Environmental Simulation Game</p>
+                <div style="margin-top: 2rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <span style="background: var(--accent-success); color: var(--bg-primary); padding: 0.5rem 1rem; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">Theme: Ecology</span>
+                    <span style="background: var(--accent-primary); color: var(--bg-primary); padding: 0.5rem 1rem; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">Platform: Desktop & Mobile</span>
+                </div>
+                <a href="../../index.html" class="btn btn-primary" style="margin-top: 2rem;">← Back to Home</a>
             </div>
         </div>
     </section>
-    <section class="projects">
+
+    <!-- Project Overview -->
+    <section class="about" style="padding: 4rem 0;">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Project Details</h2>
-            </div>
-            <div class="project-card featured">
-                <div class="project-image">
-                    <div class="project-placeholder">
-                        <i class="fas fa-leaf"></i>
+            <div class="about-content" style="grid-template-columns: 1fr; max-width: 1000px; margin: 0 auto;">
+                <div class="about-text">
+                    <div style="background: var(--bg-card); border: var(--border-thick) solid var(--accent-primary); padding: var(--spacing-2xl); margin-bottom: var(--spacing-2xl); text-align: center;">
+                        <h2 style="color: var(--accent-primary); font-size: var(--font-size-3xl); margin-bottom: var(--spacing-lg); text-transform: uppercase; letter-spacing: 2px;">Game Overview</h2>
+                        <p style="color: var(--text-secondary); line-height: 1.6; font-size: var(--font-size-lg);">
+                            The game assigns players the responsibility of management, taking into account global ecology, balance, and risks, and making strategic decisions with various point systems. Similarly, while controlling the population, it involves solving random tasks and problems and encountering unexpected events.
+                        </p>
                     </div>
-                </div>
-                <div class="project-content">
-                    <h3 class="project-title">EcoState</h3>
-                    <p class="project-description">An environmental simulation game that challenges players to build and manage sustainable ecosystems. Features complex resource management, environmental impact systems, and educational gameplay mechanics.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Unity</span>
-                        <span class="tech-tag">C#</span>
-                        <span class="tech-tag">Python</span>
+
+                    <!-- Game Screenshots -->
+                    <div style="background: var(--bg-card); border: var(--border-thin) solid var(--border-color); padding: var(--spacing-xl); margin-bottom: var(--spacing-xl);">
+                        <h3 style="color: var(--accent-secondary); font-size: var(--font-size-2xl); margin-bottom: var(--spacing-lg); text-transform: uppercase; letter-spacing: 2px; text-align: center;">Game Screenshots</h3>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--spacing-lg);">
+                            <div style="text-align: center;">
+                                <div style="background: var(--bg-tertiary); height: 200px; display: flex; align-items: center; justify-content: center; border: var(--border-thin) solid var(--border-color); margin-bottom: var(--spacing-sm);">
+                                    <i class="fas fa-image" style="font-size: 3rem; color: var(--accent-primary);"></i>
+                                </div>
+                                <p style="color: var(--text-secondary); font-size: var(--font-size-sm);">Main Game Interface</p>
+                            </div>
+                            <div style="text-align: center;">
+                                <div style="background: var(--bg-tertiary); height: 200px; display: flex; align-items: center; justify-content: center; border: var(--border-thin) solid var(--border-color); margin-bottom: var(--spacing-sm);">
+                                    <i class="fas fa-chart-line" style="font-size: 3rem; color: var(--accent-secondary);"></i>
+                                </div>
+                                <p style="color: var(--text-secondary); font-size: var(--font-size-sm);">Resource Management</p>
+                            </div>
+                            <div style="text-align: center;">
+                                <div style="background: var(--bg-tertiary); height: 200px; display: flex; align-items: center; justify-content: center; border: var(--border-thin) solid var(--border-color); margin-bottom: var(--spacing-sm);">
+                                    <i class="fas fa-globe" style="font-size: 3rem; color: var(--accent-success);"></i>
+                                </div>
+                                <p style="color: var(--text-secondary); font-size: var(--font-size-sm);">World Map View</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Technical Features -->
+                    <div style="background: var(--bg-card); border: var(--border-thin) solid var(--border-color); padding: var(--spacing-xl); margin-bottom: var(--spacing-xl);">
+                        <h3 style="color: var(--accent-secondary); font-size: var(--font-size-2xl); margin-bottom: var(--spacing-lg); text-transform: uppercase; letter-spacing: 2px;">Technical Features</h3>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--spacing-lg);">
+                            <div>
+                                <h4 style="color: var(--accent-primary); margin-bottom: var(--spacing-sm); font-size: var(--font-size-lg);">ScriptableObject System</h4>
+                                <p style="color: var(--text-secondary); line-height: 1.5; font-size: var(--font-size-sm);">
+                                    Each city uses its ID to find its data with the code I wrote using ScriptableObject. With this ID, it finds its name, population, all values, color, and other details.
+                                </p>
+                            </div>
+                            <div>
+                                <h4 style="color: var(--accent-primary); margin-bottom: var(--spacing-sm); font-size: var(--font-size-lg);">Dynamic Point System</h4>
+                                <p style="color: var(--text-secondary); line-height: 1.5; font-size: var(--font-size-sm);">
+                                    Strategic decision-making with various point systems that affect global ecology, balance, and risks.
+                                </p>
+                            </div>
+                            <div>
+                                <h4 style="color: var(--accent-primary); margin-bottom: var(--spacing-sm); font-size: var(--font-size-lg);">Random Event System</h4>
+                                <p style="color: var(--text-secondary); line-height: 1.5; font-size: var(--font-size-sm);">
+                                    Players encounter unexpected events and must solve random tasks and problems while controlling population.
+                                </p>
+                            </div>
+                            <div>
+                                <h4 style="color: var(--accent-primary); margin-bottom: var(--spacing-sm); font-size: var(--font-size-lg);">Cross-Platform</h4>
+                                <p style="color: var(--text-secondary); line-height: 1.5; font-size: var(--font-size-sm);">
+                                    Available on both Desktop and Mobile platforms with optimized UI and controls for each platform.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Game Mechanics -->
+                    <div style="background: var(--bg-card); border: var(--border-thin) solid var(--border-color); padding: var(--spacing-xl); margin-bottom: var(--spacing-xl);">
+                        <h3 style="color: var(--accent-secondary); font-size: var(--font-size-2xl); margin-bottom: var(--spacing-lg); text-transform: uppercase; letter-spacing: 2px;">Game Mechanics</h3>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--spacing-lg);">
+                            <div>
+                                <h4 style="color: var(--accent-primary); margin-bottom: var(--spacing-sm); font-size: var(--font-size-lg);">🌍 Global Ecology Management</h4>
+                                <ul style="color: var(--text-secondary); line-height: 1.6; font-size: var(--font-size-sm); margin-left: var(--spacing-md);">
+                                    <li>Environmental balance monitoring</li>
+                                    <li>Resource allocation and distribution</li>
+                                    <li>Ecosystem health tracking</li>
+                                    <li>Sustainability metrics</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 style="color: var(--accent-primary); margin-bottom: var(--spacing-sm); font-size: var(--font-size-lg);">🎯 Strategic Decision Making</h4>
+                                <ul style="color: var(--text-secondary); line-height: 1.6; font-size: var(--font-size-sm); margin-left: var(--spacing-md);">
+                                    <li>Point-based decision system</li>
+                                    <li>Risk assessment and management</li>
+                                    <li>Long-term planning strategies</li>
+                                    <li>Consequence evaluation</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 style="color: var(--accent-primary); margin-bottom: var(--spacing-sm); font-size: var(--font-size-lg);">👥 Population Control</h4>
+                                <ul style="color: var(--text-secondary); line-height: 1.6; font-size: var(--font-size-sm); margin-left: var(--spacing-md);">
+                                    <li>Population growth management</li>
+                                    <li>Resource demand balancing</li>
+                                    <li>Quality of life optimization</li>
+                                    <li>Migration patterns</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 style="color: var(--accent-primary); margin-bottom: var(--spacing-sm); font-size: var(--font-size-lg);">🎲 Dynamic Events</h4>
+                                <ul style="color: var(--text-secondary); line-height: 1.6; font-size: var(--font-size-sm); margin-left: var(--spacing-md);">
+                                    <li>Random task generation</li>
+                                    <li>Unexpected event handling</li>
+                                    <li>Problem-solving challenges</li>
+                                    <li>Adaptive gameplay</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Technologies Used -->
+                    <div style="background: var(--bg-card); border: var(--border-thick) solid var(--accent-success); padding: var(--spacing-xl);">
+                        <h3 style="color: var(--accent-success); font-size: var(--font-size-2xl); margin-bottom: var(--spacing-lg); text-transform: uppercase; letter-spacing: 2px; text-align: center;">Technologies Used</h3>
+                        <div style="display: flex; flex-wrap: wrap; gap: var(--spacing-md); justify-content: center;">
+                            <span class="tech-tag" style="background: var(--accent-primary); color: var(--bg-primary); padding: var(--spacing-sm) var(--spacing-md); font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">Unity Engine</span>
+                            <span class="tech-tag" style="background: var(--accent-secondary); color: var(--bg-primary); padding: var(--spacing-sm) var(--spacing-md); font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">C# Programming</span>
+                            <span class="tech-tag" style="background: var(--accent-tertiary); color: var(--bg-primary); padding: var(--spacing-sm) var(--spacing-md); font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">Python</span>
+                            <span class="tech-tag" style="background: var(--accent-success); color: var(--bg-primary); padding: var(--spacing-sm) var(--spacing-md); font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">ScriptableObject</span>
+                            <span class="tech-tag" style="background: var(--accent-primary); color: var(--bg-primary); padding: var(--spacing-sm) var(--spacing-md); font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">Cross-Platform</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <p class="footer-text">&copy; 2024 Yadulla Mirzayev. Unity Game Developer from Baku, Azerbaijan.</p>
+                <div class="footer-links">
+                    <a href="../../index.html" class="footer-link">Home</a>
+                    <a href="../../index.html#projects" class="footer-link">Projects</a>
+                    <a href="../../index.html#contact" class="footer-link">Contact</a>
+                </div>
             </div>
         </div>
     </footer>
+
+    <script src="../../assets/js/script.js"></script>
 </body>
 </html>

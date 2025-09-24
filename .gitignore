@@ -207,3 +207,7 @@ $RECYCLE.BIN/
 # Project specific
 *.pdf
 !YadullaM_CV.pdf
+
+# Reference/downloaded files
+referance/
+*.download
