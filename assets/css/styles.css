@@ -284,7 +284,7 @@ section::before {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: var(--spacing-2xl);
     margin-bottom: var(--spacing-2xl);
 }
@@ -299,6 +299,9 @@ section::before {
     cursor: pointer;
     box-shadow: 0 8px 25px rgba(59, 130, 246, 0.15);
     backdrop-filter: blur(10px);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .project-card::before {
@@ -327,6 +330,27 @@ section::before {
 .project-card.featured {
     border-color: var(--accent-success);
     box-shadow: 0 0 15px rgba(224, 224, 224, 0);
+}
+
+/* Green border for special projects */
+.project-card.green-border {
+    border-color: #10b981;
+    box-shadow: 0 8px 25px rgba(16, 185, 129, 0.2);
+}
+
+.project-card.green-border:hover {
+    border-color: #059669;
+    box-shadow: 0 15px 40px rgba(16, 185, 129, 0.4);
+    transform: translateY(-8px) scale(1.02);
+}
+
+.project-card.green-border .project-iframe-container {
+    border-color: rgba(16, 185, 129, 0.3);
+}
+
+.project-card.green-border:hover .project-iframe-container {
+    border-color: #10b981;
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3), inset 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
 .project-image {
@@ -407,6 +431,10 @@ section::before {
     padding: var(--spacing-lg);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     transform: translateY(0);
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .project-card:hover .project-content {
@@ -1016,6 +1044,313 @@ section::before {
     color: var(--accent-primary);
 }
 
+/* Modern Project Card Styles */
+.modern-card {
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.9) 0%, rgba(51, 65, 85, 0.9) 100%);
+    border: 2px solid #3b82f6;
+    border-radius: 16px;
+    padding: var(--spacing-lg);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.15);
+    cursor: pointer;
+    margin-bottom: var(--spacing-lg);
+    z-index: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.modern-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 107, 53, 0.1), transparent);
+    transition: left 0.6s ease;
+    z-index: 1;
+}
+
+.modern-card:hover::before {
+    left: 100%;
+}
+
+.modern-card:hover {
+    border-color: #10b981;
+    box-shadow: 0 15px 40px rgba(16, 185, 129, 0.3);
+    transform: translateY(-4px) scale(1.01);
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.95) 0%, rgba(51, 65, 85, 0.95) 100%);
+    z-index: 10;
+}
+
+/* Project Card Header */
+.project-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--spacing-md);
+    position: relative;
+    z-index: 2;
+}
+
+.project-info {
+    flex: 1;
+}
+
+.project-title {
+    font-size: var(--font-size-lg);
+    color: #3b82f6;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: var(--spacing-xs);
+    text-shadow: 0 0 5px rgba(59, 130, 246, 0.5);
+}
+
+.project-category {
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: inline-block;
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+    box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
+}
+
+/* Project Actions */
+.project-actions {
+    display: flex;
+    gap: var(--spacing-xs);
+    position: relative;
+    z-index: 2;
+}
+
+.project-action-btn {
+    width: 35px;
+    height: 35px;
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: var(--font-size-sm);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
+}
+
+.project-action-btn:hover {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
+}
+
+.project-image-container {
+    width: 100%;
+    height: 200px;
+    background: var(--bg-tertiary);
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgba(59, 130, 246, 0.2);
+    transition: all 0.3s ease;
+    margin-bottom: var(--spacing-md);
+}
+
+.project-preview {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.modern-card:hover .project-image-container {
+    border-color: #10b981;
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.2);
+}
+
+.modern-card:hover .project-preview {
+    transform: scale(1.05);
+}
+
+/* Project Content */
+.project-content {
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.project-content:hover {
+    background: rgba(59, 130, 246, 0.05);
+    border-radius: 8px;
+}
+
+.project-description {
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-md);
+    line-height: 1.5;
+    font-size: var(--font-size-sm);
+}
+
+/* Iframe Project Styles */
+.iframe-project {
+    cursor: pointer;
+}
+
+/* Ensure iframes are visible and properly loaded */
+.iframe-project .project-iframe-container {
+    position: relative;
+}
+
+.iframe-project .project-iframe-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+    border-radius: 8px;
+    z-index: -1;
+    opacity: 0.3;
+}
+
+.iframe-project .project-iframe {
+    pointer-events: auto;
+    min-height: 167px;
+    min-width: 100%;
+}
+
+/* Force iframe content to be visible */
+.iframe-project .project-iframe-container iframe {
+    background: transparent !important;
+    border: none !important;
+    outline: none !important;
+}
+
+/* Style fallback links inside iframes */
+.iframe-project .project-iframe-container iframe a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+    color: #3b82f6;
+    text-decoration: none;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.iframe-project .project-iframe-container iframe a:hover {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 50%, #475569 100%);
+    color: #10b981;
+    transform: scale(1.02);
+}
+
+/* Ensure iframe containers don't block clicks */
+.iframe-project .project-iframe-container {
+    pointer-events: none;
+}
+
+/* Make the entire iframe project clickable */
+.iframe-project {
+    cursor: pointer;
+    position: relative;
+}
+
+.project-iframe-container {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-md);
+    position: relative;
+    overflow: hidden;
+    border: 2px solid rgba(59, 130, 246, 0.3);
+    transition: all 0.3s ease;
+    margin-bottom: var(--spacing-md);
+    pointer-events: auto;
+    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.3);
+    min-height: 200px;
+}
+
+
+.project-iframe {
+    width: 100%;
+    max-width: 552px;
+    height: 167px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4), 0 0 20px rgba(59, 130, 246, 0.1);
+    transition: all 0.3s ease;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+    position: relative;
+    z-index: 0;
+    pointer-events: auto;
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+.modern-card:hover .project-iframe-container {
+    border-color: #10b981;
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.2), inset 0 2px 8px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 30%, #334155 100%);
+}
+
+.iframe-project:hover .project-iframe {
+    transform: scale(1.02);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5), 0 0 30px rgba(59, 130, 246, 0.2);
+}
+
+/* Responsive iframe */
+@media (max-width: 768px) {
+    .project-iframe-container {
+        height: 180px;
+        padding: var(--spacing-sm);
+    }
+    
+    .project-iframe {
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-iframe-container {
+        height: 160px;
+        padding: var(--spacing-xs);
+    }
+    
+    .project-iframe {
+        height: 130px;
+    }
+}
+
 /* Project Details Modal */
 .project-modal {
     display: none;
@@ -1087,6 +1422,7 @@ section::before {
     
     .projects-grid {
         grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
     }
     
     .about-content {
@@ -1130,6 +1466,23 @@ section::before {
     .skill-level {
         font-size: var(--font-size-xs);
         padding: 3px 8px;
+    }
+    
+    /* Modern project cards responsive */
+    .modern-card {
+        padding: var(--spacing-md);
+    }
+    
+    .project-title {
+        font-size: var(--font-size-base);
+    }
+    
+    .project-image-container {
+        height: 150px;
+    }
+    
+    .project-iframe-container {
+        height: 150px;
     }
 }
 
@@ -1182,5 +1535,23 @@ section::before {
     .dot {
         width: 6px;
         height: 6px;
+    }
+    
+    /* Modern project cards mobile */
+    .modern-card {
+        padding: var(--spacing-sm);
+        border-radius: 12px;
+    }
+    
+    .project-title {
+        font-size: var(--font-size-sm);
+    }
+    
+    .project-image-container {
+        height: 120px;
+    }
+    
+    .project-iframe-container {
+        height: 120px;
     }
 }

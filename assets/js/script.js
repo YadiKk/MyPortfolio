@@ -1,9 +1,41 @@
 // Theme toggle removed, always dark mode
 
+// Initialize iframes to ensure they load properly
+function initIframes() {
+    const iframes = document.querySelectorAll('.project-iframe');
+    
+    iframes.forEach((iframe, index) => {
+        // Add a small delay to ensure proper loading
+        setTimeout(() => {
+            // Force reload the iframe
+            const src = iframe.src;
+            iframe.src = '';
+            iframe.src = src;
+            
+            // Add load event listener
+            iframe.addEventListener('load', function() {
+                console.log(`Iframe ${index + 1} loaded successfully`);
+            });
+            
+            // Add error event listener
+            iframe.addEventListener('error', function() {
+                console.log(`Iframe ${index + 1} failed to load`);
+                // Retry loading after 2 seconds
+                setTimeout(() => {
+                    iframe.src = src;
+                }, 2000);
+            });
+        }, index * 100); // Stagger the loading
+    });
+}
+
 // Smooth scrolling for navigation links
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize theme
     initTheme();
+    
+    // Initialize iframes
+    initIframes();
     // Navigation smooth scrolling
     const navLinks = document.querySelectorAll('.nav-link');
     navLinks.forEach(link => {
@@ -120,20 +152,30 @@ document.addEventListener('DOMContentLoaded', function() {
         addSkillCardHoverEffects();
     }
 
-    // Pixel art style animations & project page navigation
-    const projectCards = document.querySelectorAll('.project-card');
-    // Only one declaration of projectPages
-    const projectPages = [
-        'ecostate.html',
-        'solid-plane.html',
-        'temporal-warfare.html',
-        'car-of-cube.html',
-        'developers-story.html',
-        'random-key.html',
-        'online-tank2d.html'
-    ];
-    projectCards.forEach((card, idx) => {
-        // Animation
+    // Modern project card interactions
+    const modernCards = document.querySelectorAll('.modern-card');
+    
+    modernCards.forEach(card => {
+        // For iframe projects, add click event to the card (not iframe area)
+        if (card.classList.contains('iframe-project')) {
+            card.addEventListener('click', function(e) {
+                // Don't trigger if clicking on iframe or iframe container
+                if (e.target.closest('.project-iframe-container') || e.target.closest('.project-iframe')) {
+                    return;
+                }
+                
+                // Find the project content link and click it
+                const projectLink = card.querySelector('.project-content');
+                if (projectLink) {
+                    projectLink.click();
+                }
+            });
+        }
+    });
+
+    // Legacy project cards (if any remain)
+    const legacyCards = document.querySelectorAll('.project-card:not(.modern-card):not(.iframe-project)');
+    legacyCards.forEach(card => {
         card.addEventListener('mouseenter', function() {
             this.style.transform = 'scale(1.05)';
             this.style.borderColor = 'var(--accent-primary)';
@@ -141,14 +183,6 @@ document.addEventListener('DOMContentLoaded', function() {
         card.addEventListener('mouseleave', function() {
             this.style.transform = 'scale(1)';
             this.style.borderColor = 'var(--border-color)';
-        });
-        // Page navigation
-        card.style.cursor = 'pointer';
-        card.addEventListener('click', function(e) {
-            if (e.target.closest('.project-link')) return;
-            if (projectPages[idx]) {
-                window.location.href = projectPages[idx];
-            }
         });
     });
 
